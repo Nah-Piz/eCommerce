@@ -1,0 +1,27 @@
+#all-items {
+    margin-top: 5rem;
+    border: 1px solid var(--bd);
+    border-radius: 20px;
+    background-color: var(--minor);
+}
+.items-ctn {
+    column-count: 2;
+    column-gap: .6rem;
+    column-rule: none;
+    column-width: 180px;
+    padding: 0.6rem;
+}
+@media screen and (min-width: 640px) {
+    .items-ctn {
+    column-count: 3;
+    column-gap: 1rem;
+    padding: 1rem;
+    }
+}
+@media screen and (min-width: 860px) {
+    .items-ctn {
+    column-count: 4;
+    column-gap: 2rem;
+    padding: 2rem;
+    }
+}

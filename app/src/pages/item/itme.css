@@ -1,0 +1,47 @@
+.indv-ctn {
+    margin: 8rem 0;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 10%;
+}
+.l-ctn {
+    margin-bottom: 3rem;
+}
+.l-ctn .img-ctn {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.r-ctn {
+    flex: 1;
+    height: 100%;
+    padding: 3rem 2rem;
+    background-color: var(--minor);
+    border: 1px solid var(--bd);
+    color: var(--title);
+    gap: 1rem;
+    border-radius: 3rem;
+}
+.ctr-ctn {
+    width: 70%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+    .ctr-ctn {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 680px) {
+    .l-ctn {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 540px) and (max-width: 680px) {
+    .l-ctn .img-ctn {
+        width: 320px;
+        height: 320px;
+    }
+    .r-ctn {
+        min-width: 400px;
+    }
+}

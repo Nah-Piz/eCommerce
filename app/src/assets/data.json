@@ -1,0 +1,86 @@
+[
+    {
+        "image": "public/images/black-2-slot-toaster.jpg",
+        "name": "Black 2 Slot Toaster",
+        "price": "150000",
+        "keywords": "",
+        "slug": "black-2-slot-toaster"
+    },
+    {
+        "image": "public/images/blackout-curtain-set-beige.webp",
+        "name": "Blackout Curtain Set Beige",
+        "price": "70000",
+        "keywords": "",
+        "slug": "blackout-curtain-set-beige"
+    },
+    {
+        "image": "public/images/blackout-curtains-black.jpg",
+        "name": "Blackout Curtain Set Black",
+        "price": "85000",
+        "keywords": "",
+        "slug": "blackout-curtains-black"
+    },
+    {
+        "image": "public/images/coffeemaker-with-glass-carafe-black.jpg",
+        "name": "Coffeemaker with Glass Carafe Black",
+        "price": "120000",
+        "keywords": "",
+        "slug": "coffeemaker-with-glass-carafe-black"
+    },
+    {
+        "image": "public/images/cotton-bath-towels-teal.webp",
+        "name": "Cotton Bath Towels Teal",
+        "price": "35000",
+        "keywords": "",
+        "slug": "cotton-bath-towels-teal"
+    },
+    {
+        "image": "public/images/countertop-blender-64-oz.jpg",
+        "name": "Countertop Blender 64-oz",
+        "price": "150000",
+        "keywords": "",
+        "slug": "countertop-blender-64-oz"
+    },
+    {
+        "image": "public/images/double-elongated-twist-french-wire-earrings.webp",
+        "name": "Double Elongated Twist French Wire Earrings",
+        "price": "20000",
+        "keywords": "",
+        "slug": "double-elongated-twist-french-wire-earrings"
+    },
+    {
+        "image": "public/images/duvet-cover-set-blue-twin.jpg",
+        "name": "Duvet Cover Set Blue Twin",
+        "price": "250000",
+        "keywords": "",
+        "slug": "duvet-cover-set-blue-twin"
+    },
+    {
+        "image": "public/images/electric-glass-and-steel-hot-water-kettle.webp",
+        "name": "Electric Glass and Steel Hot Water Kettle",
+        "price": "100000",
+        "keywords": "",
+        "slug": "electric-glass-and-steel-hot-water-kettle"
+    },
+    {
+        "image": "public/images/facial-tissue-2-ply-18-boxes.jpg",
+        "name": "Facial Tissue 2-ply-18 Boxes",
+        "price": "12000",
+        "keywords": "",
+        "slug": "facial-tissue-2-ply-18-boxes"
+    },
+    {
+        "image": "public/images/floral-mixing-bowl-set.jpg",
+        "name": "Floral Mixing Bowl Set",
+        "price": "30000",
+        "keywords": "",
+        "slug": "floral-mixing-bowl-set"
+    },
+    {
+        "image": "public/images/intermediate-composite-basketball.jpg",
+        "name": "Intermediate Composite Basketball",
+        "price": "320000",
+        "keywords": "",
+        "slug": "intermediate-composite-basketball"
+    }
+]

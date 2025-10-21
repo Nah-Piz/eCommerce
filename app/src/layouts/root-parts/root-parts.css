@@ -1,0 +1,72 @@
+.nav-section {
+    padding: 1rem 0;
+    background-color: var(--minor);
+    border-bottom: 1px solid var(--bd);
+}
+.logo {
+    background: linear-gradient(to right, red, blue);
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+}
+.more {
+    cursor: pointer;
+}
+.cart {
+    background-color: var(--minest);
+    border: 1px solid var(--bd);
+    padding: .5rem 1rem;
+    gap: 1rem;
+    border-radius: 5px;
+    color: var(--title);
+}
+
+.auth-ctn {
+    gap: 1rem;
+    padding: .5rem 1rem;
+}
+
+.signupl{
+    background-color: #f19;
+}
+
+.loginl {}
+
+/* sidebar styling */
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cart-ctn, .h-ctn {
+    margin-top: 2rem;
+}
+.cart-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.dtl-ctn {
+    width: min(80%, 100%);
+}
+.price-ctn {
+    width: 100%;
+}
+.ttl {
+    font-size: 1rem;
+}
+.price {
+    font-size: 1.2rem;
+}
+.remove {
+    background-color: red;
+}
+@media screen and (max-width: 640px) {
+    .ttl {
+        font-size: .85rem;
+    }
+    .price {
+        font-size: 1rem;
+    }
+}

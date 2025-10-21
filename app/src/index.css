@@ -1,0 +1,171 @@
+:root {
+  --bg-head: rgba(0,0,0,0.072);
+  --minor: hsl(0 0 97%);
+  --minest: hsl(0 0 95);
+  --color: rgb(0, 55, 219);
+  --title: hsl(0 0 0);
+  --semi-title: hsl(0 0 25);
+  --bg: hsl(0 0 100%);
+  --bd: hsl(0 0 80%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(0 0 10%);
+    --color: rgb(0, 55, 219);
+    --minor: hsl(0 0 15%);
+    --minest: hsl(0 0 20);
+    --bd: hsl(0 0 20%);
+    --title: hsl(0 0 100);
+    --t-minor: hsl(0 0 100);
+    --semi-title: hsl(0 0 75);
+  }
+}
+
+.dark {
+  --bg: hsl(0 0 10%);
+  --minor: hsl(0 0 15%);
+  --bd: hsl(0 0 20%);
+  --title: hsl(0 0 100);
+  --minest: hsl(0 0 20);
+  --semi-title: hsl(0 0 75);
+}
+.light {
+  --bg: hsl(0 0 100%);
+  --minor: hsl(0 0 97%);
+  --bd: hsl(0 0 80%);
+  --title: hsl(0 0 0);
+  --minest: hsl(0 0 95);
+  --semi-title: hsl(0 0 25);
+}
+
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  background-color: var(--bg);
+  font-size: 16px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.primaryText {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--title);
+}
+.secondaryText {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--semi-title);
+}
+.textCenter {
+  width: 100%;
+  text-align: center;
+}
+.heading {
+  color: var(--color);
+  font-size: 2rem;
+  font-weight: 500;
+}
+.pXs {
+  padding: 0rem 0.5rem;
+}
+.pXl {
+  padding: 0rem 2rem;
+}
+.pXm {
+  padding: 0rem 1rem;
+}
+.pYs {
+  padding: 0.5rem 0;
+}
+.mbs {
+  margin-bottom: 0.6rem;
+}
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flexSpaceBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+    gap: 10%;
+}
+.innerWidth {
+  width: 100%;
+}
+@media screen and (min-width: 640px) {
+  .innerWidth {
+    width: clamp(641px, 92%, 1080px);
+    margin: 0rem auto;
+  }
+}
+.button {
+  background-color: orange;
+  color: white;
+  padding: 0.6rem 1.0rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in;
+  border-radius: 8px;
+}
+.button:hover {
+  transform: scale(1.06);
+}
+.button:focus {
+  border-color: rgba(255, 0, 0, 0.772);
+}
+.spanBtn:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+/* page layout */
+
+.parent {
+  display: flex;
+}
+main {
+  flex: 1;
+  max-width: 980px;
+  transition: all 0.5s ease-in;
+}
+
+
+/* theme  */
+.theme {
+  position: fixed;
+  top: 87vh;
+  right: 5%;
+
+  span {
+    padding: 1rem;
+    background-color: var(--minor);
+    border: 1px solid var(--bd);
+    border-radius: 1rem;
+    color: var(--title);
+  }
+}

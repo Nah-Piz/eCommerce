@@ -1,0 +1,29 @@
+.card {
+    break-inside: avoid-column;
+    margin-bottom: 1rem;
+    background-color: var(--minest);
+    border: 1px solid var(--bd);
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+.dtl-ctn {
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.image-ctn {
+    width: 100%;
+}
+.image-ctn img {
+    width: 100%;
+}
+.item-price {
+    font-size: 1.5rem;
+}
+.item-name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.addItem {
+    width: 100%;
+}

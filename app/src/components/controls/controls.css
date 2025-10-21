@@ -1,0 +1,27 @@
+.ctr-ctn {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+}
+.ctr-ctn span {
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.55rem;
+    font-weight: 500;
+}
+.white-text {
+    background-color: rgba(0,0,0,0.24);
+    color: white;
+    cursor: pointer;
+}
+.ctr-ctn span:not(.white-text) {
+    background-color: var(--minest);
+    border: 1px solid var(--bd);
+}
+@media screen and (max-width: 400px) {
+    .ctr-ctn {
+        gap: 4%;
+    }
+}
