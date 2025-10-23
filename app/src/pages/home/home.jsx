@@ -1,9 +1,11 @@
+import HeroSection from "../../components/hero/heroSection";
 import AllItems from "./parts/allItems";
 
 
-function Home() {
+function Home() { 
     return (
         <>
+            <HeroSection />
             <AllItems />
         </>
     );

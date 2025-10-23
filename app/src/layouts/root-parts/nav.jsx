@@ -10,15 +10,16 @@ function NavBar() {
     const { user } = useSelector(state => state.user);
 
     return (
-        <div className="nav-section">
-            <section className="innerWidth flexSpaceBtn">
-                <div className="logo-ctn">
-                    <NavLink to="/">
-                        <span className="primaryText logo">iShoppy</span>
-                    </NavLink>
-                </div>
-                <nav className="nav-container"></nav>
-                
+        <>
+            <div className="nav-section">
+                <section className="innerWidth flexSpaceBtn">
+                    <div className="logo-ctn">
+                        <NavLink to="/">
+                            <span className="primaryText logo">iShoppy</span>
+                        </NavLink>
+                    </div>
+                    <nav className="nav-container"></nav>
+                    
                     <div
                         className="more"
                     >
@@ -43,8 +44,12 @@ function NavBar() {
                         }
                         
                     </div>
-            </section>
-        </div>
+                </section>
+            </div>
+            <div className="nav-section">
+                <section className="innerWidth flexSpaceBtn"></section>
+            </div>
+        </>
     );
 }
 

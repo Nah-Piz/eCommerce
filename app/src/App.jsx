@@ -7,7 +7,7 @@ import Aside from './pages/cart/aside'
 import LoginPage from './pages/login/login'
 import SignupPage from './pages/login/signup'
 
-function App() {
+function App() { 
 
   const mainUI = createBrowserRouter(
     createRoutesFromElements(

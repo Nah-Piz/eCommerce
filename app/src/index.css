@@ -6,7 +6,7 @@
   --title: hsl(0 0 0);
   --semi-title: hsl(0 0 25);
   --bg: hsl(0 0 100%);
-  --bd: hsl(0 0 80%);
+  --bd: hsl(0 0 80%); 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -110,7 +110,7 @@ a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-    gap: 10%;
+  gap: 10%;
 }
 .innerWidth {
   width: 100%;

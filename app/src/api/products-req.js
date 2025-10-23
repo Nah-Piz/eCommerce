@@ -23,3 +23,12 @@ export async function GetAPdt(id) {
         return error.message;
     }
 }
+
+export async function SearchPdts(query) {
+    try {
+        const response = await axios.get("http://localhost:2424/api/search/"+query);
+        return response.data;
+    } catch (error) {
+        return error.message;
+    }
+}

@@ -1,0 +1,82 @@
+.hero-stn {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem 0 2rem;
+    /* border: 1px solid var(--bd); */
+}
+
+.sch-stn {
+    border: 1px solid;
+    width: clamp(300px, 100%, 800px);
+    margin: auto;
+}
+
+.lbl-ctn {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+
+.sch-ctn {
+    border: 1px solid var(--bd);
+    border-radius: 9px;
+    width: 100%;
+    display: flex;
+    transition: all 0.2s ease-in;
+    margin: 0px 1rem;
+}
+.sch-ctn:hover, .sch-ctn:focus-within {
+    border-color: orange;
+}
+
+.sch {
+    padding: 1rem;
+    flex: 1;
+    background: transparent;
+    color: var(--title);
+    font-size: 1.5rem;
+}
+
+.sch-lbl {
+    color: var(--title);
+}
+
+.sch-lbl button {
+    border-radius: 0 8px 8px 0;
+    height: 100%;
+}
+
+.rlt-mdl {
+    /* border: 1px solid var(--bd); */
+    overflow: hidden;
+    padding: 0px 2rem;
+
+}
+
+.rlt-stn {
+    transition: all 0.5s ease-in;
+    transform: translateY(-500px);
+    margin-bottom: 1rem;
+}
+
+.rlt-ttl {
+    padding: 1rem;
+}
+
+.rlt-ctn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.rlt-card {
+    border: 1px solid var(--bd);
+    gap: 1rem;
+    padding: 1rem;
+    min-width: 300px;
+    flex: 1;
+}
+
+.img-ctn {
+    width: 72px;
+    height: 72px;
+}
