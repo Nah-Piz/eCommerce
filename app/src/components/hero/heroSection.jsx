@@ -105,15 +105,17 @@ function HeroSection() {
                             <div className="rlt-ctn">
                                 {
                                     searchResults.map(result => (
-                                        <div key={result._id} className="flexStart rlt-card">
-                                            <div className="img-ctn">
-                                                <img src={result.image} alt={result.name} style={{width: "100%", height: "100%"}} />
+                                        <Link to={result._id}>
+                                            <div key={result._id} className="flexStart rlt-card">
+                                                <div className="img-ctn">
+                                                    <img src={result.image} alt={result.name} style={{width: "100%", height: "100%"}} />
+                                                </div>
+                                                <div className="rlt-dtl">
+                                                    <div className="primaryText">{ result.name }</div>
+                                                    <span className="secondaryText">{ result.price }</span>
+                                                </div>
                                             </div>
-                                            <div className="rlt-dtl">
-                                                <div className="primaryText">{ result.name }</div>
-                                                <span className="secondaryText">{ result.price }</span>
-                                            </div>
-                                        </div>
+                                        </Link>
                                     ))
                                 }
                             </div>
