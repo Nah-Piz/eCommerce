@@ -24,7 +24,7 @@ function ItemCard({ item }) {
         <div className="flexColStart card">
             <div className="image-ctn">
                 <img
-                    src={image}
+                    src={"app/"+image}
                     alt={name}
                     style={{height:200}}
                 />
