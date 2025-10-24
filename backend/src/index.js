@@ -19,7 +19,7 @@ app.use(express.json())
 
 app.use('/api',route)
 
-const PORT = 2424;
+const PORT = process.env.Port || 2424;
 
 app.listen(PORT, () => {
     console.log(`yayi port is ${PORT}`)
