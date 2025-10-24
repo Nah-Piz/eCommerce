@@ -1,7 +1,7 @@
 import axios from "axios"
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "https://ishoppy.onrender.com"
+axios.defaults.baseURL = "https://ishoppy.onrender.com/api"
 
 export const AddCartItem = async (product,quantity) => {
     const body = { product,quantity }

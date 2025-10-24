@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://ishoppy.onrender.com"
+axios.defaults.baseURL = "https://ishoppy.onrender.com/api"
 axios.defaults.withCredentials = true;
 
 export const loggingUser = async (body,endpoint) => {
