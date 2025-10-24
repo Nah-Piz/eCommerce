@@ -14,9 +14,15 @@ function CartItem({ item, reload }) {
 
     const [ItemQuantity, setItemQuantity] = useState(item.quantity);
 
+    const handleIncreaseQuantity = () => {
+        setItemQuantity(q => q + 1)
+    }
+
+    const handleDecreaseQuantity = () => {
+        setItemQuantity(q=>(q>1) ? q-1 : 1)
+    }
 
     const handleRemoveCart = async (id) => {
-        console.log("Its removing")
         try {
             const removed = await RemoveCart(id);
             dispatch(UpdateUiCartQuantity(removed.status));
