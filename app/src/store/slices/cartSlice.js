@@ -20,7 +20,7 @@ const cartSlice = createSlice({
             const qty = action.payload.qty;
         },
         remove(state, action) {
-            state.cart = state.cart.filter(f => f.id !== action.payload);
+            state.cart.isLogged = false;
         }
     }
 })

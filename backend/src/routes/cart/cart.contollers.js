@@ -69,9 +69,13 @@ export const removeCartItem = async (req,res) => {
             const cartItems = userCart.items.filter(f => f._id.toString() !== id);
             userCart.items = cartItems;
         }
-        await userCart.save();
-        res.sendStatus(200)
+        const savedCart = await userCart.save();
+        const status = {
+            isLogged: true,
+            length: savedCart.items.length
+        };
+        res.json({ success: true, data: savedCart.items, status });
     } catch (error) {
-        res.sendStatus(500);
+        res.status(500).json({ success: false, error: error.message, msg: "Server failed to from product from cart." });
     }
 }

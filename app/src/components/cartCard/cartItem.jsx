@@ -5,34 +5,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { RemoveCart } from '../../api/cart-req';
+import { UpdateUiCartQuantity } from '../../store/slices/cartSlice';
 
-function CartItem({ item }) {
+function CartItem({ item, reload }) {
 
     const { cart } = useSelector(state => state.cart);
     const dispatch = useDispatch();
 
     const [ItemQuantity, setItemQuantity] = useState(item.quantity);
 
-    // useEffect(() => {
-    //     const it = cart.find(f => f.id === item.id);
-    //     settem(it.quantity)
-    // },[cart])
-
-    // const cartItem = data.find(f => f.id === item.id);
-
-    const handleIncreaseQuantity = () => {
-        setItemQuantity(q => q + 1)
-        console.log("I was called and cart is", ItemQuantity)
-    }
-
-    const handleDecreaseQuantity = () => {
-        setItemQuantity(q=>(q>1) ? q-1 : 1)
-    }
 
     const handleRemoveCart = async (id) => {
+        console.log("Its removing")
         try {
             const removed = await RemoveCart(id);
-            console.log(removed);
+            dispatch(UpdateUiCartQuantity(removed.status));
+            reload(removed.data)
         } catch (error) {
             console.log(error)
         }

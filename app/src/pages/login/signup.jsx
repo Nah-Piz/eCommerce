@@ -31,10 +31,9 @@ function SignupPage() {
             setAuthError(null);
             emailRef.current.value = "";
             passwordRef.current.value = "";
-            dispatch(loginUser())
+            dispatch(loginUser());
             navigate("/")
         } catch (error) {
-            console.log("u guys i control this game")
             console.log(error)
         }
     }

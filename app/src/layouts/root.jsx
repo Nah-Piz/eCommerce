@@ -1,10 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import NavBar from "./root-parts/nav";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { displayModal, loginUser, logoutAction } from "../store/slices/userSlice";
+import { verifyStatus } from "../api/auth-req";
 
 function RootLayout() {
 
     const [currentTheme, setCurrentTheme] = useState();
+
+    const { user } = useSelector(state => state.user);
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const body = document.body;
@@ -12,9 +19,8 @@ function RootLayout() {
         const prefersDark = matchMedia("(prefers-color-scheme: dark)");
 
         if (storedTheme) {
-            console.log(storedTheme)
 
-            if (storedTheme==="light") return body.classList.add("light");
+            if (storedTheme === "light") return body.classList.add("light");
             
             body.classList.add("dark");
 
@@ -23,7 +29,20 @@ function RootLayout() {
         }
 
         setCurrentTheme(prefersDark.matches ? "dark" : "light")
-    },[])
+    }, []);
+
+    useEffect(() => { 
+        const stillLogged = async () => {
+            try {
+                const res = await verifyStatus();
+                if (res.status === 401) return dispatch(logoutAction());
+                dispatch(loginUser());
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        stillLogged()
+    }, []);
 
     const handleTheme = () => {
         const body = document.body;
@@ -46,9 +65,36 @@ function RootLayout() {
 
     return (
         <>
-            <header>
+            <header className="header">
                 <NavBar />
             </header>
+            {
+                (user.displayModalNow) ? (
+                    <div className="auth-modal">
+                        <div className="exit-mdl">
+                            <span
+                                className="primaryText"
+                                onClick={()=>dispatch(displayModal(false))}
+                            >X</span>
+                        </div>
+                        <div className="primaryText">Please Sign Up to Continue.</div>
+                        <div className="flexCenter mdl-btn-ctn">
+                            <Link to="/auth/login">
+                                <button
+                                    className="button mbtn1"
+                                    onClick={()=>dispatch(displayModal(false))}
+                                >Login</button>
+                            </Link>
+                            <Link to={ "/auth/signup" }>
+                                <button
+                                    className="button mbtn2"
+                                    onClick={()=>dispatch(displayModal(false))}
+                                >Sign Up</button>
+                            </Link>
+                        </div>
+                    </div>
+                ) : ""
+            }
             <div className="parent">
                 <main className="innerWidth">
                     <Outlet />

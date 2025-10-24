@@ -3,12 +3,15 @@ import "./auth.css"
 import { useState } from "react";
 import { loggingUser } from "../../api/auth-req";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../store/slices/userSlice";
 
 function LoginPage() {
 
     const [authError, setAuthError] = useState(null);
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const emailRef = useRef(null)
     const passwordRef = useRef(null)
@@ -26,13 +29,13 @@ function LoginPage() {
 
         try {
             const res = await loggingUser(body, "signup");
-            console.log(res)
             if (!res.success) return setAuthError(res.msg);
             setAuthError(null);
             emailRef.current.value = "";
             passwordRef.current.value = "";
             usernameRef.current.value = "";
-            navigate("/")
+            dispatch(loginUser());
+            navigate("/");
         } catch (error) {
             console.log(error)
         }

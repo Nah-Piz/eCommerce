@@ -3,6 +3,7 @@ import './card.css'
 import { UpdateUiCartQuantity } from '../../store/slices/cartSlice';
 import { Link } from 'react-router-dom';
 import { AddCartItem } from '../../api/cart-req';
+import { displayModal } from '../../store/slices/userSlice';
 
 function ItemCard({ item }) {
     const { name, price, slug, image, _id } = item;
@@ -13,9 +14,8 @@ function ItemCard({ item }) {
     const handleAddCart = async (id) => {
         try {
             const res = await AddCartItem(id)
-            if (!res.success) return alert(res.msg)
+            if (!res.success) return dispatch(displayModal(true))
             if (res.userStatus.isLogged) dispatch(UpdateUiCartQuantity(res.userStatus))
-            console.log(res)
         } catch (error) {
             console.error(error)
         }

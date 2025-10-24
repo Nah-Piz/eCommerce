@@ -17,10 +17,8 @@ export const AddCartItem = async (product,quantity) => {
 export const GetAllCart = async () => {
     try {
         const res = await axios.get("/cart/");
-        console.log(res.data);
         return res.data
     } catch (error) {
-        console.log(error)
         return { msg: error.response.data.msg };
     }
 }
@@ -30,7 +28,6 @@ export const RemoveCart = async (id) => {
         const res = await axios.delete("/cart/" + id);
         return res.data;
     } catch (error) {
-        console.error(error);
         return { msg: error.response.data.msg };
     }
 }

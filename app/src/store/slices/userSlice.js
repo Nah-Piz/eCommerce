@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
     user: {
-        isLogged: false
+        isLogged: false,
+        displayModalNow: false
     }
 }
 
@@ -13,10 +14,16 @@ const userSlice = createSlice({
     reducers: {
         loginUser(state, action) {
             state.user.isLogged = true;
+        },
+        displayModal(state, action) {
+            state.user.displayModalNow = action.payload;
+        },
+        logoutAction(state, action) {
+            state.user.isLogged = false;
         }
     }
 });
 
-export const { loginUser } = userSlice.actions;
+export const { loginUser,displayModal,logoutAction } = userSlice.actions;
 
 export default userSlice.reducer;

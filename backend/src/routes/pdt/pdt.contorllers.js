@@ -42,7 +42,6 @@ export const getPdt = async (req, res) => {
         if (!foundPdt) return res.status(400).json({ success: false, msg: "Product not found" });
         if (user) {
             const cart = await Cart.findOne({ user: user.id });
-            console.log(cart);
             if (cart) {
                 const existing = cart.items.find(pdt => pdt.product.toString() === foundPdt._id.toString());
                 if (existing) {

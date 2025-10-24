@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './hero.css'
 import { SearchPdts } from '../../api/products-req';
 
@@ -52,7 +53,6 @@ function HeroSection() {
         if (typed !== "") {
             try {
                 const data = await SearchPdts(typed);
-                console.log(data)
                 setSearchResults(data.data);
             } catch (error) {
                 console.error(error)

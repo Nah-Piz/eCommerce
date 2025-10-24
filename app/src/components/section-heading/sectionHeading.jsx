@@ -1,6 +1,6 @@
 import './sec.css'
 
-function SectionHeading({title,subTitle,slug}) { 
+function SectionHeading({title,subTitle}) { 
     return (
         <>
             <div className="pXl flexSpaceBtn shctn">

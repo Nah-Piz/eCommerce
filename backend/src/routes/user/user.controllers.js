@@ -30,3 +30,12 @@ export const loginUser = async (req,res) => {
         res.status(500).json({success:false,msg:error.msg})
     }
 }
+
+export const userStatus = async (req,res) => {
+    res.sendStatus(200)
+}
+
+export const logoutUser = async (req,res) => {
+    res.clearCookie("token");
+    res.sendStatus(200)
+}

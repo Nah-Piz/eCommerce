@@ -11,8 +11,6 @@ function Item() {
     const { id } = useParams();
     const [item, setItem] = useState();
 
-    /// }, [cart]);
-
     const [itemQuantity, setItemQuantity] = useState(1);
     
     useEffect(() => {
@@ -27,9 +25,6 @@ function Item() {
             }
         }
         fetchItem()
-        
-        // const it = data.find(f => f.id === id);
-        // (it) ? setItem(it) : setItem(false);
     }, [id]);
 
     const handleIncreseQuantity = () => {

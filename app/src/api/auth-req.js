@@ -12,3 +12,20 @@ export const loggingUser = async (body,endpoint) => {
     }
 }
 
+export const logout = async () => {
+    try {
+        const res = await axios.get("/auth/logout");
+        return res.status;
+    } catch (error) {
+        return error
+    }
+}
+
+export const verifyStatus = async () => {
+    try {
+        const res = await axios.get("/auth/reload");
+        return res.data
+    } catch (error) {
+        return error
+    }
+}

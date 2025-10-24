@@ -14,6 +14,7 @@
 .lbl-ctn {
     margin: 2rem 0;
     font-size: 2.5rem;
+    text-align: center;
 }
 
 .sch-ctn {
@@ -72,7 +73,7 @@
     border: 1px solid var(--bd);
     gap: 1rem;
     padding: 1rem;
-    min-width: 300px;
+    width: clamp(280px,100%,350px);
     flex: 1;
 }
 
