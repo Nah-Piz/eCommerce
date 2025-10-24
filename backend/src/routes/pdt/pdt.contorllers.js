@@ -7,7 +7,6 @@ export const getAllPdts = async (req, res) => {
     let userStatus = null;
     if (token) {
         const user = jwt.verify(token, process.env.My_JWT_secret)
-        console.log(user)
         try {
             const userCart = await Cart.findOne({ user: user.id });
             if (!userCart) {

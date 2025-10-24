@@ -7,9 +7,9 @@ import ConnectDatabase from "./database/db.connection.js";
 
 const app = express();
 
-ConnectDatabase();
-
 dotenv.config()
+
+ConnectDatabase();
 
 app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 

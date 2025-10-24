@@ -23,8 +23,7 @@ export const loginUser = async (req,res) => {
         const foundUser = await Users.findOne({ email: body.email });
         if (!foundUser) return res.status(400).json({ success: false, msg: "Invalid email..." });
         if (!comparePasswords(body.password, foundUser.password)) return res.status(400).json({ success: false, msg: "Invalid password..." }); 
-        const token = generateWebToken(res, foundUser._id);
-        console.log(token)
+        generateWebToken(res, foundUser._id);
         res.status(200).json({ success: true, msg: "User logged in successfully" });
     } catch (error) {
         res.status(500).json({success:false,msg:error.msg})

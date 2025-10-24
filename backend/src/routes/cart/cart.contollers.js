@@ -6,16 +6,6 @@ export const addCart = async (req,res) => {
     const { body:{product,user,quantity} } = req;
     const { token } = req.cookies;
     const userStatus = { isLogged: true }
-    
-    // console.log("******8****verification passed*********")
-    // console.log(token,"token")
-    // console.log("***********user*****************",);
-    // console.log(product);
-    // console.log("***********product**************");
-    // console.log(user);
-    // console.log("***********quantity**************");
-    // console.log(quantity);
-    
 
     try {
         const foundPdt = await Products.findById(product);
@@ -69,7 +59,13 @@ export const removeCartItem = async (req,res) => {
             const cartItems = userCart.items.filter(f => f._id.toString() !== id);
             userCart.items = cartItems;
         }
-        const savedCart = await userCart.save();
+        await userCart.save();
+        const savedCart = await Cart.findOne({ user })
+            .populate({
+                path: "items.product",
+                select: "name price image",
+                model: "Products"
+            });
         const status = {
             isLogged: true,
             length: savedCart.items.length

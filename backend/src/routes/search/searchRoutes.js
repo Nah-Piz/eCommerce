@@ -5,7 +5,6 @@ const route = Router();
 
 route.get("/:query", async (req, res) => {
     const { query } = req.params;
-    if (!query) console.log("fuck you")
     try {
         const searchResult = await Products.find({ name: { $regex: query, $options: "i" } });
         res.json({ query, data: searchResult });

@@ -100,8 +100,8 @@ function RootLayout() {
                     <Outlet />
                 </main>
             </div>
-            <footer className="innerWidth">
-                <h6>&copy; iShoppy Company Ltd { new Date().getFullYear() }</h6>
+            <footer className="innerWidth flexCenter">
+                <h6 className="secondaryText">&copy; iShoppy Company Ltd { new Date().getFullYear() }</h6>
             </footer>
             <div
                 className="theme"

@@ -21,6 +21,7 @@ function SideBar() {
             try {
                 const res = await GetAllCart();
                 setCart(res.data);
+                console.log(res.data)
                 dispatch(UpdateUiCartQuantity({ isLogged: true, length: res.data.length }))
             } catch (error) {
                 console.error(error);
@@ -29,7 +30,8 @@ function SideBar() {
         fetchCartData();
     }, []);
     
-    const reloadCart = (newCart)=>{
+    const reloadCart = (newCart) => {
+        console.log(newCart)
         setCart(newCart);
     }
 

@@ -2,10 +2,9 @@ import mongoose from "mongoose";
 
 async function ConnectDatabase() {
     try {
-        await mongoose.connect("mongodb://localhost:27017/NaNaShop")
-        console.log("DB connected successfully.")
+        await mongoose.connect(process.env.MongoDB_Connection);
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
 
