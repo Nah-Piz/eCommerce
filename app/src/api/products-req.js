@@ -8,7 +8,7 @@ axios.defaults.withCredentials = true;
 
 export async function GetAllPdts() {
     try {
-        const response = await axios.get("http://localhost:2424/api/pdts");
+        const response = await axios.get("https://ishoppy.onrender.com/api/pdts");
         return response.data;
     } catch (error) {
         return error.message;
@@ -17,7 +17,7 @@ export async function GetAllPdts() {
 
 export async function GetAPdt(id) {
     try {
-        const response = await axios.get("http://localhost:2424/api/pdts/"+id);
+        const response = await axios.get("https://ishoppy.onrender.com/api/pdts/"+id);
         return response.data;
     } catch (error) {
         return error.message;
@@ -26,7 +26,7 @@ export async function GetAPdt(id) {
 
 export async function SearchPdts(query) {
     try {
-        const response = await axios.get("http://localhost:2424/api/search/"+query);
+        const response = await axios.get("https://ishoppy.onrender.com/api/search/"+query);
         return response.data;
     } catch (error) {
         return error.message;

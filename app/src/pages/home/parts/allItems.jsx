@@ -16,6 +16,7 @@ function AllItems() {
         const fetchData = async () => {
             try {
                 const dataFetched = await GetAllPdts()
+                console.log(dataFetched)
                 setData(dataFetched.data);
                 if (dataFetched.userStatus.isLogged) dispatch(UpdateUiCartQuantity(dataFetched.userStatus));
             } catch (error) {
