@@ -11,7 +11,7 @@ dotenv.config()
 
 ConnectDatabase();
 
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(cors({ credentials: true, origin: ["http://localhost:5173","https://ishoppy-app.onrender.com/"] }));
 
 app.use(cookieParser())
 
