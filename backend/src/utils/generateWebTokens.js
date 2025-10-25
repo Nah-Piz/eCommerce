@@ -7,8 +7,7 @@ export const generateWebToken = (res, id) => {
         httpOnly: true,
         secure: true,
         sameSite: "none",
-        maxAge: 60 * 60 * 1000,
-        domain: "onrender.com"
+        maxAge: 60 * 60 * 1000
     });
     return token
 }
