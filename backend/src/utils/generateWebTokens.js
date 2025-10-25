@@ -16,7 +16,7 @@ export const verifyToken = (req, res, next) => {
     const { body } = req;
     const { token } = req.cookies;
     const currentTime = Date.now() / 1000;
-    if (!token) return res.status(401).json({success:false,msg:"Session token expired"});
+    if (!token) return res.status(401).json({success:false,msg:"Session token not there"});
     try {
         const verified = jwt.verify(token, process.env.My_JWT_secret);
         if (verified.exp < currentTime) return res.status(401).json({success:false,msg:"Session token expired"});
