@@ -5,9 +5,10 @@ export const generateWebToken = (res, id) => {
 
     res.cookie("token", token, {
         httpOnly: true,
-        secure: process.env.MODE_ENV === "production",
-        sameSite: true,
-        maxAge: 60 * 60 * 1000
+        secure: true,
+        sameSite: "none",
+        maxAge: 60 * 60 * 1000,
+        domain: "onrender.com"
     });
     return token
 }
