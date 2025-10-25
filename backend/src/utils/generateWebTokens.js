@@ -5,8 +5,8 @@ export const generateWebToken = (res, id) => {
 
     res.cookie("token", token, {
         httpOnly: true,
-        Secure: true,
-        SameSite: "none",
+        secure: true,
+        sameSite: "none",
         maxAge: 60 * 60 * 1000
     });
     return token
